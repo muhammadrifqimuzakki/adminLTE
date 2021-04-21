@@ -39,3 +39,4 @@ Route::get('admin/ajaxadmin/dataBuku/{id}', [App\Http\Controllers\AdminControlle
 Route::delete('admin/books/delete', [App\Http\Controllers\AdminController::class, 'delete_book'])
     ->name('admin.book.delete')
     ->middleware('is_admin');
+//rifqi

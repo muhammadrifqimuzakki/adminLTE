@@ -31,18 +31,19 @@ class AdminController extends Controller
 
     public function submit_book(Request $req)
     {
-        $book =new Book;
+        $book = new Book;
 
         $book->judul = $req->get('judul');
         $book->penulis = $req->get('penulis');
         $book->tahun = $req->get('tahun');
         $book->penerbit = $req->get('penerbit');
 
-        if($req->hasFile('cover')){
+        if ($req->hasFile('cover')) {
             $extension = $req->file('cover')->extension();
-            $filename = 'cover_buku_'.time().'.'.$extension;
+            $filename = 'cover_buku_' . time() . '.' . $extension;
             $req->file('cover')->storeAs(
-                'public/cover_buku', $filename
+                'public/cover_buku',
+                $filename
             );
             $book->cover = $filename;
         }
@@ -55,25 +56,28 @@ class AdminController extends Controller
         return redirect()->route('admin.books')->with($notification);
     }
 
-    public function getDataBuku($id){
+    public function getDataBuku($id)
+    {
         $buku = Book::find($id);
         return response()->json($buku);
     }
 
-    public function update_book(Request $req){
+    public function update_book(Request $req)
+    {
         $book = Book::find($req->get('id'));
         $book->judul = $req->get('judul');
         $book->penulis = $req->get('penulis');
         $book->tahun = $req->get('tahun');
         $book->penerbit = $req->get('penerbit');
 
-        if($req->hasFile('cover')){
+        if ($req->hasFile('cover')) {
             $extension = $req->file('cover')->extension();
-            $filename = 'cover_buku_'.time().'.'.$extension;
+            $filename = 'cover_buku_' . time() . '.' . $extension;
             $req->file('cover')->storeAs(
-                'public/cover_buku', $filename
+                'public/cover_buku',
+                $filename
             );
-            Storage::delete('public/cover_buku/'.$req->get('old_cover'));
+            Storage::delete('public/cover_buku/' . $req->get('old_cover'));
             $book->cover = $filename;
         }
 
@@ -86,9 +90,10 @@ class AdminController extends Controller
         return redirect()->route('admin.books')->with($notification);
     }
 
-    public function delete_book(Request $req){
+    public function delete_book(Request $req)
+    {
         $book = Book::find($req->get('id'));
-        Storage::delete('public/cover_buku/'.$req->get('old_cover'));
+        Storage::delete('public/cover_buku/' . $req->get('old_cover'));
 
         $book->delete();
         $notification = array(

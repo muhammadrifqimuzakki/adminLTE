@@ -12,13 +12,13 @@
             <div class="card">
                 <div class="card-header">{{ __('Pengelolaan Buku') }} <button class="btn btn-primary float-right" data-toggle="modal" data-target="#tambahBukuModal"><i class="fa fa-plus"></i>Tambah Data</button></div>
                 <div class="card-body">
-                    
+
                     <table id="table-data" class="table table-borderer">
                         <thead>
                             <tr>
                                 <th>NO</th>
                                 <th>JUDUL</th>
-                                <th>PENULIS</th>
+                                <th>PENULIS BUKU</th>
                                 <th>TAHUN</th>
                                 <th>PENERBIT</th>
                                 <th>COVER</th>
@@ -232,7 +232,7 @@
 
   });
 
- 
+
 </script>
 
 
