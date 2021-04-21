@@ -18,7 +18,7 @@
                             <tr>
                                 <th>NO</th>
                                 <th>JUDUL</th>
-                                <th>PENULIS BUKU</th>
+                                <th>PENULIS</th>
                                 <th>TAHUN</th>
                                 <th>PENERBIT</th>
                                 <th>COVER</th>
