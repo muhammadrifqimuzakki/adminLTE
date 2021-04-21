@@ -20,7 +20,7 @@
                                 <th>JUDUL</th>
                                 <th>PENULIS</th>
                                 <th>TAHUN</th>
-                                <th>PENERBIT</th>
+                                <th>PENERBIT BUKU</th>
                                 <th>COVER</th>
                                 <th>AKSI</th>
                             </tr>
