@@ -22,7 +22,7 @@
                                 <th>TAHUN</th>
                                 <th>PENERBIT</th>
                                 <th>COVER</th>
-                                <th>AKSI</th>
+                                <th>ACTION</th>
                             </tr>
                         </thead>
                         <tbody>
