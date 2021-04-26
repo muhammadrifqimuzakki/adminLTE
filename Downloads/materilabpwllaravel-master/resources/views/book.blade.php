@@ -21,7 +21,7 @@
                                 <th>PENULIS</th>
                                 <th>TAHUN</th>
                                 <th>PENERBIT</th>
-                                <th>COVER</th>
+                                <th>COVER BUKU</th>
                                 <th>ACTION</th>
                             </tr>
                         </thead>
